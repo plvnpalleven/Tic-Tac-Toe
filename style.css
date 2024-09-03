@@ -1,0 +1,175 @@
+#controls {
+  margin-bottom: 10px;
+}
+
+#decreaseBtn,
+#increaseBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #526d82;
+  color: white;
+  border: none;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#increaseBtn:hover,
+#decreaseBtn:hover {
+  background-color: #27374d;
+}
+
+.cell {
+  width: 75px;
+  height: 75px;
+  box-shadow: 0 0 0 2px black;
+  line-height: 75px;
+  font-size: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5eded;
+}
+
+#gameName,
+#history {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#gameContainer,
+#historyContainer {
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+}
+
+#cellContainer {
+  display: grid;
+  width: fit-content;
+  margin: auto;
+}
+
+#restartBtn,
+#historyBtn {
+  background-color: #526d82;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 5px;
+}
+#backBtn {
+  background-color: #526d82;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 43%;
+  margin-top: 30px;
+}
+
+#restartBtn:hover,
+#historyBtn:hover,
+#backBtn:hover {
+  background-color: #6482ad;
+  transform: scale(1.05);
+}
+
+#restartBtn:active,
+#historyBtn:active,
+#backBtn:active {
+  background-color: #6482ad;
+  transform: scale(0.95);
+}
+
+#indexBackground,
+#historyBackground {
+  background-color: #dde6ed;
+  width: 1000px;
+  height: 900px;
+  margin: auto;
+  border-radius: 30px;
+  padding-top: 10px;
+}
+
+#gridSizeDisplay {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #27374d;
+}
+
+#fullscreenBackground {
+  display: flex;
+  background-color: #27374d;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+#statusText {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.game-record {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 500px;
+  margin: 15px auto;
+  padding: 10px 10px 10px 10px;
+}
+
+.game-record h3 {
+  font-size: 25px;
+  font-weight: bolder;
+  color: rgb(48, 48, 48);
+  margin-bottom: 5px;
+  font-family: "Playfair Display", serif;
+  margin-top: 5px;
+}
+
+.game-record p {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: black;
+  margin: 2px 0;
+}

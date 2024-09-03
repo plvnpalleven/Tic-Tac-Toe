@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Open+Sans:wght@400&family=Lato:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="fullscreenBackground">
+      <div id="historyBackground">
+        <h1 id="history">History</h1>
+        <div id="historyContainer"></div>
+        <button id="backBtn" onclick="backToMainMenu()">Main Menu</button>
+      </div>
+    </div>
+    <script>
+      // เอาไว้กดกลับไปMainMenu
+      function backToMainMenu() {
+        window.location.href = "main.html";
+      }
+      // แสดงgame history จาก local storage
+      function displayGameHistory() {
+        const historyContainer = document.getElementById("historyContainer");
+        historyContainer.innerHTML = "";
+
+        const gameHistory =
+          JSON.parse(localStorage.getItem("gameHistory")) || [];
+        //ดึง5เกมท้ายสุดของarrayมา
+        gameHistory.slice(-5).forEach((game, index) => {
+          const gameDiv = document.createElement("div");
+          gameDiv.classList.add("game-record");
+
+          gameDiv.innerHTML = `
+            <h3>Game ${index + 1}</h3>
+            <p>Winner: ${game.winner}</p>
+            <p>Date: ${new Date(game.date).toLocaleString()}</p>
+          `;
+
+          historyContainer.appendChild(gameDiv);
+        });
+      }
+      displayGameHistory();
+    </script>
+  </body>
+</html>
